@@ -6,6 +6,7 @@ public class Gameloop : MonoBehaviour
 {   
     // singleton pattern
     private static Gameloop instance;
+    public static Gameloop public_instance;
     // refs
     [SerializeField] PlayerControls playerControls;
     [SerializeField] Toupie toupie;
@@ -46,6 +47,7 @@ public class Gameloop : MonoBehaviour
         else
         {
             instance = this;
+            public_instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
     }

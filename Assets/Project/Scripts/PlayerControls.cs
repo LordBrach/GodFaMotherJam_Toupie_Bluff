@@ -10,6 +10,8 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float WeakTime = 1.0f;
     [SerializeField] int BaseDmg = 2;
     [SerializeField] int WeakDMGMultiplier = 5;
+    [SerializeField] Hand handPlayerOne;
+    [SerializeField] Hand handPlayerTwo;
 
     private bool PlayerOneWeak = false;
     private bool PlayerTwoWeak = false;
@@ -42,6 +44,7 @@ public class PlayerControls : MonoBehaviour
 
     private void PlayerOneInput()
     {
+        handPlayerOne.CallAttack();
         Debug.Log("Player one input");
         if (PlayerTwoWeak)
         {
@@ -62,6 +65,7 @@ public class PlayerControls : MonoBehaviour
 
     private void PlayerTwoInput()
     {
+        handPlayerTwo.CallAttack();
         Debug.Log("Player two input");
         if (PlayerOneWeak)
         {

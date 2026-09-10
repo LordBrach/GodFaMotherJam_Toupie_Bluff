@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 0e3b6fc770d66274aa20b14ff393e9a3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8005611986751166117
+    second: SuddenDeath10003_0
+  - first:
+      213: 1599752099274016379
+    second: SuddenDeath10003_1
+  - first:
+      213: 8529767334469069697
+    second: SuddenDeath10003_2
+  - first:
+      213: -5755968838999246817
+    second: SuddenDeath10003_3
+  - first:
+      213: -4119474902966924381
+    second: SuddenDeath10003_4
+  - first:
+      213: -6085158180639381199
+    second: SuddenDeath10003_5
+  - first:
+      213: 6742207297660616511
+    second: SuddenDeath10003_6
+  - first:
+      213: -378198798521517331
+    second: SuddenDeath10003_7
+  - first:
+      213: -6100697444698950230
+    second: SuddenDeath10003_8
+  - first:
+      213: -4058317803224899481
+    second: SuddenDeath10003_9
+  - first:
+      213: -2523892122106396782
+    second: SuddenDeath10003_10
+  - first:
+      213: -8548974759713821548
+    second: SuddenDeath10003_11
+  - first:
+      213: -4094146748906943203
+    second: SuddenDeath10003_12
+  - first:
+      213: -4007494754525701452
+    second: SuddenDeath10003_13
+  - first:
+      213: 1622520452587523733
+    second: SuddenDeath10003_14
+  - first:
+      213: 6658340713060024886
+    second: SuddenDeath10003_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SuddenDeath10003_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 320
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a699e7bfa5a91f60800000000000000
+      internalID: 8005611986751166117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 998
+        width: 83
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76c9e5fe06733610800000000000000
+      internalID: 1599752099274016379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_2
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1012
+        width: 226
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b62c3b232df5670800000000000000
+      internalID: 8529767334469069697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_3
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1014
+        width: 118
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f187b3d56d0be10b0800000000000000
+      internalID: -5755968838999246817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_4
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 999
+        width: 238
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab0583d66fa4d6c0800000000000000
+      internalID: -4119474902966924381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_5
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1056
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1396de010ec2d8ba0800000000000000
+      internalID: -6085158180639381199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_6
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 979
+        width: 51
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f7b13c0d1219d50800000000000000
+      internalID: 6742207297660616511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_7
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 1003
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea35af423e50caf0800000000000000
+      internalID: -378198798521517331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_8
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 39
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5f5963ff7f55ba0800000000000000
+      internalID: -6100697444698950230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_9
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 0
+        width: 238
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760e229b575fda7c0800000000000000
+      internalID: -4058317803224899481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_10
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 0
+        width: 118
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ff072bc7559fcd0800000000000000
+      internalID: -2523892122106396782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_11
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 0
+        width: 226
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c2a7d10c0fb5980800000000000000
+      internalID: -8548974759713821548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_12
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 60
+        width: 51
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1dc41d393bae27c0800000000000000
+      internalID: -4094146748906943203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_13
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 0
+        width: 83
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba114dd0c48268c0800000000000000
+      internalID: -4007494754525701452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_14
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 320
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e094151c9548610800000000000000
+      internalID: 1622520452587523733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10003_15
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 0
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 632c673e99d276c50800000000000000
+      internalID: 6658340713060024886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SuddenDeath10003_0: 8005611986751166117
+      SuddenDeath10003_1: 1599752099274016379
+      SuddenDeath10003_10: -2523892122106396782
+      SuddenDeath10003_11: -8548974759713821548
+      SuddenDeath10003_12: -4094146748906943203
+      SuddenDeath10003_13: -4007494754525701452
+      SuddenDeath10003_14: 1622520452587523733
+      SuddenDeath10003_15: 6658340713060024886
+      SuddenDeath10003_2: 8529767334469069697
+      SuddenDeath10003_3: -5755968838999246817
+      SuddenDeath10003_4: -4119474902966924381
+      SuddenDeath10003_5: -6085158180639381199
+      SuddenDeath10003_6: 6742207297660616511
+      SuddenDeath10003_7: -378198798521517331
+      SuddenDeath10003_8: -6100697444698950230
+      SuddenDeath10003_9: -4058317803224899481
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

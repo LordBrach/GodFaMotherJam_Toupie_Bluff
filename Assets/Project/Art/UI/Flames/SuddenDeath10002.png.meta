@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: 9878872ef504d454da41cf2afba33682
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2871874882779247383
+    second: SuddenDeath10002_0
+  - first:
+      213: 3463267790390510465
+    second: SuddenDeath10002_1
+  - first:
+      213: 6352877694574703247
+    second: SuddenDeath10002_2
+  - first:
+      213: -2018715072337818149
+    second: SuddenDeath10002_3
+  - first:
+      213: 4380613269961102073
+    second: SuddenDeath10002_4
+  - first:
+      213: 7754460054376823848
+    second: SuddenDeath10002_5
+  - first:
+      213: 4075661788790238854
+    second: SuddenDeath10002_6
+  - first:
+      213: -8432432268267482268
+    second: SuddenDeath10002_7
+  - first:
+      213: -8075585952598367247
+    second: SuddenDeath10002_8
+  - first:
+      213: -2695226781244681762
+    second: SuddenDeath10002_9
+  - first:
+      213: 8175076725588086233
+    second: SuddenDeath10002_10
+  - first:
+      213: -7815773599108118704
+    second: SuddenDeath10002_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SuddenDeath10002_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 370
+        width: 319
+        height: 710
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec839c820d0528d0800000000000000
+      internalID: -2871874882779247383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_1
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 998
+        width: 87
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1834748c4bfff0030800000000000000
+      internalID: 3463267790390510465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 981
+        width: 236
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82b0aeaa94f92850800000000000000
+      internalID: 6352877694574703247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_3
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1024
+        width: 91
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bddc39a56551cf3e0800000000000000
+      internalID: -2018715072337818149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_4
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 986
+        width: 242
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2d46e3f801bcc30800000000000000
+      internalID: 4380613269961102073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_5
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 1025
+        width: 52
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c3616a5506d9b60800000000000000
+      internalID: 7754460054376823848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_6
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 52
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ea9799dc8af8830800000000000000
+      internalID: 4075661788790238854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_7
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 0
+        width: 242
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4631069678bf9fa80800000000000000
+      internalID: -8432432268267482268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_8
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 0
+        width: 91
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f36d36cc51cdef80800000000000000
+      internalID: -8075585952598367247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_9
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 0
+        width: 236
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed19acab581a89ad0800000000000000
+      internalID: -2695226781244681762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_10
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 0
+        width: 87
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ddcd30f7f4b37170800000000000000
+      internalID: 8175076725588086233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuddenDeath10002_11
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 0
+        width: 319
+        height: 710
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 057c844425bc88390800000000000000
+      internalID: -7815773599108118704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SuddenDeath10002_0: -2871874882779247383
+      SuddenDeath10002_1: 3463267790390510465
+      SuddenDeath10002_10: 8175076725588086233
+      SuddenDeath10002_11: -7815773599108118704
+      SuddenDeath10002_2: 6352877694574703247
+      SuddenDeath10002_3: -2018715072337818149
+      SuddenDeath10002_4: 4380613269961102073
+      SuddenDeath10002_5: 7754460054376823848
+      SuddenDeath10002_6: 4075661788790238854
+      SuddenDeath10002_7: -8432432268267482268
+      SuddenDeath10002_8: -8075585952598367247
+      SuddenDeath10002_9: -2695226781244681762
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -26,12 +26,14 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         inputs = new PlayerInput();
-        inputs.Enable();
+        //inputs.Enable();
 
         inputs.Default.PlayerOne.performed += ctx => PlayerOneInput();
 
         inputs.Default.PlayerTwo.performed += ctx => PlayerTwoInput();
     }
+
+    public void EnableInputs() => inputs.Enable();
 
     public void DisableInputs()
     {

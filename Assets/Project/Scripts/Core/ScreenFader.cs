@@ -2,9 +2,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-[RequireComponent(typeof(CanvasGroup))]
-[DisallowMultipleComponent]
 public class ScreenFader : MonoBehaviour
 {
     public static ScreenFader Instance { get; private set; }
@@ -31,7 +28,11 @@ public class ScreenFader : MonoBehaviour
         ApplyCG(startOpaque ? 1f : 0f);
     }
 
-    private void Start() => FadeIn();
+    private void Start()
+    {
+        if (startOpaque) 
+            FadeIn();   
+    }
 
     public Coroutine FadeIn(float duration = -1f) => Run(0f, duration);
     public Coroutine FadeOut(float duration = -1f) => Run(1f, duration);

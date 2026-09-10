@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CanvasGroup))]
 public class ReadyPanel : MonoBehaviour
 {
     [Serializable]
@@ -19,40 +18,59 @@ public class ReadyPanel : MonoBehaviour
         [NonSerialized] public bool ready;
     }
 
-    [Header("Panel (fade out une fois les 2 joueurs prêts)")]
     [SerializeField] private CanvasGroup readyGroup;
     [SerializeField, Min(0f)] private float fadeDuration = 0.25f;
 
-    [Header("Joueurs")]
-    [SerializeField] private PlayerSlot p1 = new PlayerSlot { displayName = "Joueur 1" };
-    [SerializeField] private PlayerSlot p2 = new PlayerSlot { displayName = "Joueur 2" };
+    [Header("Container Players")]
+    [SerializeField] private GameObject playersContainer;
 
-    [Header("Countdown")]
+    [Header("Players")]
+    [SerializeField] private PlayerSlot p1 = new PlayerSlot { displayName = "Player 1" };
+    [SerializeField] private PlayerSlot p2 = new PlayerSlot { displayName = "Player 2" };
+
+    [SerializeField] private CanvasGroup countdownGroup;
     [SerializeField] private TMP_Text countdownLabel;
     [SerializeField, Min(1)] private int countdownFrom = 3;
-    [SerializeField, Min(0.1f)] private float countdownStep = 1f;
+    [Tooltip("Countdown speed of fade in/out of every numbers")]
+    [SerializeField, Min(0.01f)] private float countdownFadeDuration = 0.6f;
+    [Tooltip("Time where's the text stay before to fade out")]
+    [SerializeField, Min(0f)] private float countdownPeakHold = 0.5f;
+    [Tooltip("Time where last text is visible before fade out")]
+    [SerializeField, Min(0f)] private float fightHold = 0.4f;
     [SerializeField] private string goText = "Fight !";
 
-    [Header("Sons")]
+    [Header("Sounds")]
     [SerializeField] private AudioClip readyClip;
     [SerializeField] private AudioClip tickClip;
     [SerializeField] private AudioClip goClip;
 
-    [Header("Sortie (add ici Gameloop.StartGame dans l'inspecteur)")]
+    [Header("Add here Gameloop.StartGame on inspector)")]
     [SerializeField] private UnityEvent onCountdownComplete;
 
     private PlayerInput inputs;
 
-    private void Reset() => readyGroup = GetComponent<CanvasGroup>();
-
     private void Awake()
     {
-        if (readyGroup == null) readyGroup = GetComponent<CanvasGroup>();
+        if (readyGroup == null || countdownGroup == null)
+        {
+            Debug.LogError("Ready Group or countdownGroup missing.", this);
+            enabled = false;
+            return;
+        }
+
+        readyGroup.gameObject.SetActive(true);
+        readyGroup.alpha = 1f;
+        readyGroup.interactable = true;
+        readyGroup.blocksRaycasts = true;
+
+        countdownGroup.alpha = 0f;
+        countdownGroup.interactable = false;
+        countdownGroup.blocksRaycasts = false;
+
+        if (playersContainer != null) playersContainer.SetActive(true);
 
         Setup(p1);
         Setup(p2);
-
-        if (countdownLabel != null) countdownLabel.gameObject.SetActive(false);
 
         inputs = new PlayerInput();
         inputs.Default.PlayerOne.performed += OnPlayerOnePressed;
@@ -89,8 +107,7 @@ public class ReadyPanel : MonoBehaviour
     {
         ReleaseInputs(); // le ready-check est fini
 
-        yield return UIFade.FadeTo(readyGroup, 0f, fadeDuration);
-        readyGroup.gameObject.SetActive(false);
+        if (playersContainer != null) playersContainer.SetActive(false); 
 
         yield return CountdownRoutine();
 
@@ -99,20 +116,32 @@ public class ReadyPanel : MonoBehaviour
 
     private IEnumerator CountdownRoutine()
     {
-        if (countdownLabel != null) countdownLabel.gameObject.SetActive(true);
-
         for (int i = countdownFrom; i > 0; i--)
-        {
-            if (countdownLabel != null) countdownLabel.text = i.ToString();
-            AudioManager.Instance?.PlaySfx(tickClip);
-            yield return new WaitForSecondsRealtime(countdownStep);
-        }
+            yield return PulseNumber(i.ToString(), tickClip);
 
-        if (countdownLabel != null) countdownLabel.text = goText;
+        countdownLabel.text = goText;
         AudioManager.Instance?.PlaySfx(goClip);
-        yield return new WaitForSecondsRealtime(countdownStep * 0.5f);
 
-        if (countdownLabel != null) countdownLabel.gameObject.SetActive(false);
+        Coroutine fightIn = StartCoroutine(UIFade.FadeTo(countdownGroup, 1f, countdownFadeDuration));
+        Coroutine contentOut = StartCoroutine(UIFade.FadeTo(readyGroup, 0f, fadeDuration));
+        yield return fightIn;
+        yield return contentOut;
+
+        readyGroup.gameObject.SetActive(false);
+
+        if (fightHold > 0f) yield return new WaitForSecondsRealtime(fightHold);
+
+        yield return UIFade.FadeTo(countdownGroup, 0f, countdownFadeDuration);
+    }
+
+    private IEnumerator PulseNumber(string text, AudioClip clip)
+    {
+        countdownLabel.text = text;
+        AudioManager.Instance?.PlaySfx(clip);
+
+        yield return UIFade.FadeTo(countdownGroup, 1f, countdownFadeDuration);
+        if (countdownPeakHold > 0f) yield return new WaitForSecondsRealtime(countdownPeakHold);
+        yield return UIFade.FadeTo(countdownGroup, 0f, countdownFadeDuration);
     }
 
     private void ReleaseInputs()

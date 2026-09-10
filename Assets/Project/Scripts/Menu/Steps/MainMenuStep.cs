@@ -1,15 +1,9 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-/// <summary>
-/// Écran titre : Jouer / Options / Quitter.
-/// "Options" ouvre l'OptionsPanel (overlay indépendant) sans faire avancer le flow du menu.
-/// </summary>
-/// 
-public class MainMenuStep : MenuStep
+public class MainMenuStep : MonoBehaviour
 {
-    [Header("Buttons")]
+    [Header("Boutons")]
     [SerializeField] private Button playButton;
     [SerializeField] private Button settingsButton;
     [SerializeField] private Button quitButton;
@@ -17,19 +11,24 @@ public class MainMenuStep : MenuStep
     [Header("Overlay")]
     [SerializeField] private SettingsPanel settingsPanel;
 
+    [Header("Sortie")]
+    [SerializeField] private string gameSceneName = "Game";
+
     private void Awake()
     {
-        if (playButton != null) playButton.onClick.AddListener(CompleteStep);
+        if (playButton != null) playButton.onClick.AddListener(Play);
         if (settingsButton != null) settingsButton.onClick.AddListener(OpenSettings);
         if (quitButton != null) quitButton.onClick.AddListener(Quit);
     }
 
     private void OnDestroy()
     {
-        if (playButton != null) playButton.onClick.RemoveListener(CompleteStep);
+        if (playButton != null) playButton.onClick.RemoveListener(Play);
         if (settingsButton != null) settingsButton.onClick.RemoveListener(OpenSettings);
         if (quitButton != null) quitButton.onClick.RemoveListener(Quit);
     }
+
+    private void Play() => ScreenFader.GoToScene(gameSceneName);
 
     private void OpenSettings()
     {
@@ -38,6 +37,10 @@ public class MainMenuStep : MenuStep
 
     private void Quit()
     {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
     }
 }

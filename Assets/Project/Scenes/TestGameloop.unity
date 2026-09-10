@@ -149,7 +149,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControls
   WeakTime: 1
-  WeakDMGMultiplier: 2
+  BaseDmg: 2
+  WeakDMGMultiplier: 5
+  OnPlayerInput:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerCounter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &142485604
 Transform:
   m_ObjectHideFlags: 0
@@ -313,7 +320,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -405,7 +412,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.7041065, g: 0.735849, b: 0, a: 1}
@@ -576,7 +583,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -777,6 +784,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreBar
   pointeur: {fileID: 1074960742}
+  TimeUpdate: 0.1
+  OnBeginUpdateScore:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEndUpdateScore:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1074960741
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,7 +945,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0.3196657, b: 0.5773585, a: 1}
@@ -973,9 +987,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b570b85ff5be4429331fb3623dd2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gameloop
+  playerControls: {fileID: 142485603}
   gameTimeInSeconds: 60
   TMPTimer: {fileID: 1351109132}
   score: {fileID: 1007729881}
+  OnStartGame:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEndGame:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSuddenDeathStart:
+    m_PersistentCalls:
+      m_Calls: []
   debugStartImmediately: 1
 --- !u!4 &1217222024
 Transform:
@@ -1327,11 +1351,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1077083821}
   - {fileID: 583747984}
   - {fileID: 572375914}
   - {fileID: 1269205569}
   - {fileID: 758047842}
+  - {fileID: 1077083821}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955944628

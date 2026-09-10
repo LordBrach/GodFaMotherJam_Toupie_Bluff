@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Events;
 public class Gameloop : MonoBehaviour
 {   
     // singleton pattern
     private static Gameloop instance;
+    // refs
+    [SerializeField] PlayerControls playerControls;
 
     // timer
     [SerializeField] private float gameTimeInSeconds = 60.0f;
@@ -20,6 +23,11 @@ public class Gameloop : MonoBehaviour
     private int maxSpinForce = 100;
     private int minSpinForce = -100;
 
+    // event
+    public UnityEvent OnStartGame;
+    public UnityEvent OnEndGame;
+    public UnityEvent OnSuddenDeathStart;
+
     // debug
     [SerializeField] private bool debugStartImmediately = true;
 
@@ -28,6 +36,7 @@ public class Gameloop : MonoBehaviour
 
     private void Awake()
     {
+        //singleton
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
@@ -38,6 +47,13 @@ public class Gameloop : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void OnEnable()
+    {
+        playerControls.OnPlayerInput.AddListener(UpdateScore);
+        playerControls.OnPlayerCounter.AddListener(UpdateScore);
+
     }
 
     void Start()
@@ -53,43 +69,68 @@ public class Gameloop : MonoBehaviour
     }
     private void UpdateTimer()
     {
-        if (timerEnabled) return;
+        if (!timerEnabled) return;
         TMPTimer.text = ((int)remainingGameTime).ToString();
         remainingGameTime -= Time.deltaTime;
 
-        if(!SuddenDeathEnabled && remainingGameTime <= 15)
+/*        if(!SuddenDeathEnabled && remainingGameTime <= 15)
         {
             Debug.Log("Enable suddendeath");
             SuddenDeathEnabled = true;
-        }
+        }*/
         if (remainingGameTime <= 0)
         {
-            Debug.Log("End Game");
+            timerEnabled = false;
+            Debug.Log("Mort subite");
             remainingGameTime = 0;
-            EndGame();
+            SuddenDeathEnabled = true;
+            OnSuddenDeathStart.Invoke();
         }
     }
 
 
     void StartGame()
-    {
         // reset timer
+    {
         remainingGameTime = gameTimeInSeconds;
         // start timer
+        OnStartGame.Invoke();
         timerEnabled = true;
         score.SetupScoreBar();
         // enable player input
     
     }
 
-    private void UpdateScore()
+    private void UpdateScore(Player Attacker, int dmgValue)
     {
+        if (SuddenDeathEnabled)
+            dmgValue = dmgValue * 2;
 
+        currentspinForce += dmgValue;
+        score.UpdateScoreBar(currentspinForce);
+        if(currentspinForce <= minSpinForce)
+        {
+            //currentspinForce = 0;
+            EndGame(Player.PlayerOne);
+        } else if (currentspinForce >= maxSpinForce)
+        {
+            //currentspinForce = 0;
+            score.UpdateScoreBar(currentspinForce);
+            EndGame(Player.PlayerTwo);
+        } else
+        {
+            score.UpdateScoreBar(currentspinForce);
+        }
     }
 
-    void EndGame()
+    void EndGame(Player Winner)
     {
+        OnEndGame.Invoke();
+        Debug.Log("Winner is: " + Winner.ToString());
         // Block Player input (send event)
-        // Show End Screen UI
+        playerControls.DisableInputs();
+        timerEnabled = false;
+        // TODO Show End Screen UI
+
     }
 }

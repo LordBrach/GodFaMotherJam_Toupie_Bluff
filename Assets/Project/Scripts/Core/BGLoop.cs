@@ -2,54 +2,84 @@ using UnityEngine;
 
 public class InfiniteScroller : MonoBehaviour
 {
-    public enum Direction { Left, Right }
+    public enum HorizontalDirection { Left, Right }
+    public enum VerticalDirection { Up, Down }
 
-    [Header("Tuiles")]
+    [Header("Tuile")]
+    [SerializeField] private RectTransform tilePrefab;
+
     [SerializeField] private RectTransform container;
 
     [Header("Config")]
-    [SerializeField] private Direction direction = Direction.Left;
-    [SerializeField, Min(0f)] private float speed = 50f; 
+    [SerializeField] private HorizontalDirection horizontal = HorizontalDirection.Left;
+    [SerializeField] private VerticalDirection vertical = VerticalDirection.Down;
+    [SerializeField, Min(0f)] private float speed = 50f;
 
     private RectTransform[] tiles;
-    private float tileWidth;
-    private float totalWidth;   // largeur cumulée de toutes les tuiles = une boucle complète
-    private float halfSpan;     // distance du centre à partir de laquelle une tuile est outscreen
+    private float tileWidth, tileHeight;
+    private float totalWidth, totalHeight; // largeur et hauteur de la grille complète (tuiles + marge)
+    private float halfSpanX, halfSpanY; // distance du centre à partir de laquelle une tuile est hors écran
 
-    private void Awake()
+    private void Awake() => BuildGrid();
+
+    private void BuildGrid()
     {
-        int count = container != null ? container.childCount : 0;
-        if (count == 0)
+        if (tilePrefab == null || container == null)
         {
-            Debug.LogError("Container don't have tiles.", this);
+            Debug.LogError("Tileprab or container is missing.", this);
             enabled = false;
             return;
         }
 
-        tiles = new RectTransform[count];
-        for (int i = 0; i < count; i++)
-            tiles[i] = (RectTransform)container.GetChild(i);
+        tileWidth = tilePrefab.rect.width;
+        tileHeight = tilePrefab.rect.height;
 
-        // Toutes les tuiles doivent faire la même largeur, donc on se base sur la 1ere
-        tileWidth = tiles[0].rect.width;
-        totalWidth = tileWidth * count;
+        // +2 tuiles de marge (1 de chaque côté) : une tuile ne se recycle qu'une fois
+        int cols = Mathf.CeilToInt(container.rect.width / tileWidth) + 2;
+        int rows = Mathf.CeilToInt(container.rect.height / tileHeight) + 2;
 
-        halfSpan = container.rect.width / 2f + tileWidth;
+        totalWidth = cols * tileWidth;
+        totalHeight = rows * tileHeight;
+        halfSpanX = container.rect.width / 2f + tileWidth;
+        halfSpanY = container.rect.height / 2f + tileHeight;
+
+        tiles = new RectTransform[cols * rows];
+
+        // Grille centrée sur (0,0), comme le container (pivot 0.5/0.5).
+        float startX = -(cols - 1) * tileWidth / 2f;
+        float startY = -(rows - 1) * tileHeight / 2f;
+
+        int index = 0;
+        for (int y = 0; y < rows; y++)
+        {
+            for (int x = 0; x < cols; x++)
+            {
+                RectTransform tile = Instantiate(tilePrefab, container);
+                tile.anchoredPosition = new Vector2(startX + x * tileWidth, startY + y * tileHeight);
+                tiles[index++] = tile;
+            }
+        }
     }
 
     private void Update()
     {
-        // unscaledDeltaTime : le fond continue de défiler
-        float delta = (direction == Direction.Left ? -1f : 1f) * speed * Time.unscaledDeltaTime;
+        // unscaledDeltaTime : le fond continue de défiler même en pause 
+        float dt = Time.unscaledDeltaTime;
+        float dx = (horizontal == HorizontalDirection.Left ? -1f : 1f) * speed * dt;
+        float dy = (vertical == VerticalDirection.Down ? -1f : 1f) * speed * dt;
 
         for (int i = 0; i < tiles.Length; i++)
         {
             Vector2 pos = tiles[i].anchoredPosition;
-            pos.x += delta;
+            pos.x += dx;
+            pos.y += dy;
 
-            // Recycle indépendamment de la direction, si une tuile sort du container, on la replace de l'autre côté
-            if (pos.x < -halfSpan) pos.x += totalWidth;
-            else if (pos.x > halfSpan) pos.x -= totalWidth;
+            // Recycle les tuiles qui sortent de la zone visible, en les repositionnant de l'autre côté
+            if (pos.x < -halfSpanX) pos.x += totalWidth;
+            else if (pos.x > halfSpanX) pos.x -= totalWidth;
+
+            if (pos.y < -halfSpanY) pos.y += totalHeight;
+            else if (pos.y > halfSpanY) pos.y -= totalHeight;
 
             tiles[i].anchoredPosition = pos;
         }

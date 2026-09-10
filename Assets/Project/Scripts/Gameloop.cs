@@ -90,7 +90,7 @@ public class Gameloop : MonoBehaviour
     }
 
 
-    void StartGame()
+    public void StartGame()
         // reset timer
     {
         remainingGameTime = gameTimeInSeconds;
@@ -105,6 +105,8 @@ public class Gameloop : MonoBehaviour
 
     private void UpdateScore(Player Attacker, int dmgValue)
     {
+        if (!timerEnabled) return;
+
         if (SuddenDeathEnabled)
             dmgValue = dmgValue * 2;
 

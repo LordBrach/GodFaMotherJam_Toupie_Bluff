@@ -200,7 +200,8 @@ public class Gameloop : MonoBehaviour
     {
         if (gameRunning == false)
             return;
-
+        playerControls.Inverted = false;
+        Popup.SetActive(false);
         OnEndGame.Invoke();
         gameRunning = false;
         Debug.Log("Winner is: " + Winner.ToString());

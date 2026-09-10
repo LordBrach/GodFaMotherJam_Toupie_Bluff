@@ -18,7 +18,7 @@ public class Gameloop : MonoBehaviour
     private float remainingGameTime = 0.0f;
     private bool timerEnabled = false;
     private bool SuddenDeathEnabled;
-
+    private bool gameRunning = false;
     // score
     [SerializeField] private ScoreBar score;
     private int currentspinForce = 0;
@@ -95,6 +95,7 @@ public class Gameloop : MonoBehaviour
     public void StartGame()
         // reset timer
     {
+        gameRunning = true;
         remainingGameTime = gameTimeInSeconds;
         // start timer
         OnStartGame.Invoke();
@@ -107,8 +108,8 @@ public class Gameloop : MonoBehaviour
 
     private void UpdateScore(Player Attacker, int dmgValue)
     {
-        if (!timerEnabled) return;
-
+        //if (!timerEnabled) return;
+        if (!gameRunning) return;
         if (SuddenDeathEnabled)
             dmgValue = dmgValue * 2;
 
@@ -133,7 +134,11 @@ public class Gameloop : MonoBehaviour
 
     void EndGame(Player Winner)
     {
+        if (gameRunning == false)
+            return;
+
         OnEndGame.Invoke();
+        gameRunning = false;
         Debug.Log("Winner is: " + Winner.ToString());
         // Block Player input (send event)
         playerControls.DisableInputs();

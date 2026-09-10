@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ScoreBar : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public class ScoreBar : MonoBehaviour
     [SerializeField] private float TimeUpdate = 0.5f;
     private float target = 0f;
     private float current = 0f;
+    private float sliderCurrent = 0f;
     private IEnumerator barCoroutine;
-
+    private Slider slider;
     public UnityEvent OnBeginUpdateScore;
     public UnityEvent OnEndUpdateScore;
 
@@ -18,6 +20,7 @@ public class ScoreBar : MonoBehaviour
     public void SetupScoreBar()
     {
         target = 0f;
+        slider = GetComponent<Slider>();
         if (pointeur != null)
         {
             pointeur.anchoredPosition = new Vector2 (0f, 0f);
@@ -48,6 +51,8 @@ public class ScoreBar : MonoBehaviour
             n = Mathf.Lerp(a, b, f / x);
             current = n;
             pointeur.anchoredPosition = new Vector2(n, 0f);
+            sliderCurrent = Mathf.Lerp(sliderCurrent, b/5, f);
+            slider.value = sliderCurrent;
             yield return null;
         }
         OnEndUpdateScore.Invoke();

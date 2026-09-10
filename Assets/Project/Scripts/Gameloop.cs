@@ -8,6 +8,7 @@ public class Gameloop : MonoBehaviour
     private static Gameloop instance;
     // refs
     [SerializeField] PlayerControls playerControls;
+    [SerializeField] Toupie toupie;
 
     // timer
     [SerializeField] private float gameTimeInSeconds = 60.0f;
@@ -96,6 +97,7 @@ public class Gameloop : MonoBehaviour
         // start timer
         OnStartGame.Invoke();
         timerEnabled = true;
+        toupie.StartToupie();
         score.SetupScoreBar();
         // enable player input
     
@@ -108,6 +110,7 @@ public class Gameloop : MonoBehaviour
 
         currentspinForce += dmgValue;
         score.UpdateScoreBar(currentspinForce);
+        toupie.UpdateSpeed(currentspinForce);
         if(currentspinForce <= minSpinForce)
         {
             //currentspinForce = 0;
@@ -117,10 +120,11 @@ public class Gameloop : MonoBehaviour
             //currentspinForce = 0;
             score.UpdateScoreBar(currentspinForce);
             EndGame(Player.PlayerTwo);
-        } else
+        } 
+/*        else
         {
             score.UpdateScoreBar(currentspinForce);
-        }
+        }*/
     }
 
     void EndGame(Player Winner)

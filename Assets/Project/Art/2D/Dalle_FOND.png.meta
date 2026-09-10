@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: f884027103f741b42bb1c4cbe0747186
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5540363228003262765
+    second: Dalle_FOND_0
+  - first:
+      213: 2550411386242691851
+    second: Dalle_FOND_1
+  - first:
+      213: -351487477409314483
+    second: Dalle_FOND_2
+  - first:
+      213: 440555036327421721
+    second: Dalle_FOND_3
+  - first:
+      213: 6262051881441882433
+    second: Dalle_FOND_4
+  - first:
+      213: -3717357336950604961
+    second: Dalle_FOND_5
+  - first:
+      213: -1561943744482582192
+    second: Dalle_FOND_6
+  - first:
+      213: 6468962397295271993
+    second: Dalle_FOND_7
+  - first:
+      213: 629077248237609902
+    second: Dalle_FOND_8
+  - first:
+      213: 8503123537084599423
+    second: Dalle_FOND_9
+  - first:
+      213: -5750287912690595562
+    second: Dalle_FOND_10
+  - first:
+      213: -4781863440400348127
+    second: Dalle_FOND_11
+  - first:
+      213: -7172812913324551628
+    second: Dalle_FOND_12
+  - first:
+      213: 1133082578520034350
+    second: Dalle_FOND_13
+  - first:
+      213: -159232175340620479
+    second: Dalle_FOND_14
+  - first:
+      213: -4018598943562657125
+    second: Dalle_FOND_15
+  - first:
+      213: -269378441491474352
+    second: Dalle_FOND_16
+  - first:
+      213: -7185545572493179114
+    second: Dalle_FOND_17
+  - first:
+      213: 71584975241672134
+    second: Dalle_FOND_18
+  - first:
+      213: 8515278899301760069
+    second: Dalle_FOND_19
+  - first:
+      213: 6591730647582092078
+    second: Dalle_FOND_20
+  - first:
+      213: 7148658123024670018
+    second: Dalle_FOND_21
+  - first:
+      213: 6227129815393512209
+    second: Dalle_FOND_22
+  - first:
+      213: -9024182870407991660
+    second: Dalle_FOND_23
+  - first:
+      213: -3637633305280405713
+    second: Dalle_FOND_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dalle_FOND_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1790
+        width: 210
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de9a3c8ffcac13b0800000000000000
+      internalID: -5540363228003262765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1790
+        width: 428
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b037b14a4a1e46320800000000000000
+      internalID: 2550411386242691851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_2
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1790
+        width: 428
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d49050660044f1bf0800000000000000
+      internalID: -351487477409314483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_3
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1790
+        width: 428
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9172e4ca87a2d1600800000000000000
+      internalID: 440555036327421721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_4
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 1790
+        width: 210
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141f866220747e650800000000000000
+      internalID: 6262051881441882433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1288
+        width: 210
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5bfddb823b496cc0800000000000000
+      internalID: -3717357336950604961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_6
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1288
+        width: 428
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051e8fe907cd25ae0800000000000000
+      internalID: -1561943744482582192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_7
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1288
+        width: 428
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930e42cb60f56c950800000000000000
+      internalID: 6468962397295271993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_8
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1288
+        width: 428
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3ab7d9c6eeab800800000000000000
+      internalID: 629077248237609902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_9
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 1288
+        width: 210
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7cc0353ec9210670800000000000000
+      internalID: 8503123537084599423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 786
+        width: 210
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 619cad71c9fd230b0800000000000000
+      internalID: -5750287912690595562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_11
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 786
+        width: 428
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c828e498863adb0800000000000000
+      internalID: -4781863440400348127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_12
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 786
+        width: 428
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43294f498ac057c90800000000000000
+      internalID: -7172812913324551628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_13
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 786
+        width: 428
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cced11a9489bf00800000000000000
+      internalID: 1133082578520034350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_14
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 786
+        width: 210
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14572002e2b4acdf0800000000000000
+      internalID: -159232175340620479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 284
+        width: 210
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9210326d811b38c0800000000000000
+      internalID: -4018598943562657125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_16
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 284
+        width: 428
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05890c41cb9f24cf0800000000000000
+      internalID: -269378441491474352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_17
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 284
+        width: 428
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 617c92a5f50d74c90800000000000000
+      internalID: -7185545572493179114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_18
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 284
+        width: 428
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c5f88cd7225ef000800000000000000
+      internalID: 71584975241672134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_19
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 284
+        width: 210
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cb2440b095c2670800000000000000
+      internalID: 8515278899301760069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 210
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2baf2879188a7b50800000000000000
+      internalID: 6591730647582092078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_21
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 0
+        width: 428
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d989b00b2253360800000000000000
+      internalID: 7148658123024670018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_22
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 0
+        width: 428
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b26c803953b6650800000000000000
+      internalID: 6227129815393512209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_23
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 0
+        width: 428
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49eaa25dd79a3c280800000000000000
+      internalID: -9024182870407991660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dalle_FOND_24
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 0
+        width: 210
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f91a728c7848dc0800000000000000
+      internalID: -3637633305280405713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dalle_FOND_0: -5540363228003262765
+      Dalle_FOND_1: 2550411386242691851
+      Dalle_FOND_10: -5750287912690595562
+      Dalle_FOND_11: -4781863440400348127
+      Dalle_FOND_12: -7172812913324551628
+      Dalle_FOND_13: 1133082578520034350
+      Dalle_FOND_14: -159232175340620479
+      Dalle_FOND_15: -4018598943562657125
+      Dalle_FOND_16: -269378441491474352
+      Dalle_FOND_17: -7185545572493179114
+      Dalle_FOND_18: 71584975241672134
+      Dalle_FOND_19: 8515278899301760069
+      Dalle_FOND_2: -351487477409314483
+      Dalle_FOND_20: 6591730647582092078
+      Dalle_FOND_21: 7148658123024670018
+      Dalle_FOND_22: 6227129815393512209
+      Dalle_FOND_23: -9024182870407991660
+      Dalle_FOND_24: -3637633305280405713
+      Dalle_FOND_3: 440555036327421721
+      Dalle_FOND_4: 6262051881441882433
+      Dalle_FOND_5: -3717357336950604961
+      Dalle_FOND_6: -1561943744482582192
+      Dalle_FOND_7: 6468962397295271993
+      Dalle_FOND_8: 629077248237609902
+      Dalle_FOND_9: 8503123537084599423
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -18,6 +18,7 @@ public class PlayerControls : MonoBehaviour
     private IEnumerator coroutineOne;
     private IEnumerator coroutineTwo;
 
+    public bool Inverted = false;
     //Events
     public UnityEvent<Player, int> OnPlayerInput;
     public UnityEvent<Player, int> OnPlayerCounter;
@@ -44,13 +45,16 @@ public class PlayerControls : MonoBehaviour
 
     private void PlayerOneInput()
     {
+        int i = 1;
+        if (Inverted)
+            i = -1;
         handPlayerOne.CallAttack();
         Debug.Log("Player one input");
         if (PlayerTwoWeak)
         {
             PlayerTwoWeak = false;
             Debug.Log("Counter");
-            OnPlayerCounter.Invoke(Player.PlayerOne, -BaseDmg * WeakDMGMultiplier);
+            OnPlayerCounter.Invoke(Player.PlayerOne, -BaseDmg * WeakDMGMultiplier * i);
         }
         else
         {
@@ -58,20 +62,23 @@ public class PlayerControls : MonoBehaviour
                 StopCoroutine(coroutineOne);
             coroutineOne = TimerPlayerOne();
             StartCoroutine(coroutineOne);
-            OnPlayerInput.Invoke(Player.PlayerOne, -BaseDmg);
+            OnPlayerInput.Invoke(Player.PlayerOne, -BaseDmg * i);
 
         }
     }
 
     private void PlayerTwoInput()
     {
+        int i = 1;
+        if (Inverted)
+            i = -1;
         handPlayerTwo.CallAttack();
         Debug.Log("Player two input");
         if (PlayerOneWeak)
         {
             PlayerOneWeak = false;
             Debug.Log("Counter");
-            OnPlayerCounter.Invoke(Player.PlayerTwo, BaseDmg * WeakDMGMultiplier);
+            OnPlayerCounter.Invoke(Player.PlayerTwo, BaseDmg * WeakDMGMultiplier * i);
         }
         else
         {
@@ -79,7 +86,7 @@ public class PlayerControls : MonoBehaviour
                 StopCoroutine(coroutineTwo);
             coroutineTwo = TimerPlayerTwo();
             StartCoroutine(coroutineTwo);
-            OnPlayerInput.Invoke(Player.PlayerTwo, BaseDmg);
+            OnPlayerInput.Invoke(Player.PlayerTwo, BaseDmg * i);
         }
     }
 

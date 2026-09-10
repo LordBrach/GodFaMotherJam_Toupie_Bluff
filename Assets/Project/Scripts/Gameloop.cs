@@ -2,16 +2,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.Events;
+using System.Collections;
+
 public class Gameloop : MonoBehaviour
 {   
     // singleton pattern
     private static Gameloop instance;
     public static Gameloop public_instance;
     // refs
+    [Header("Refs")]
     [SerializeField] PlayerControls playerControls;
     [SerializeField] Toupie toupie;
 
     // timer
+    [Header("Timer")]
     [SerializeField] private float gameTimeInSeconds = 60.0f;
     [SerializeField] private TMP_Text TMPTimer;
 
@@ -20,17 +24,29 @@ public class Gameloop : MonoBehaviour
     private bool SuddenDeathEnabled;
     private bool gameRunning = false;
     // score
+    [Header("Score")]
     [SerializeField] private ScoreBar score;
     private int currentspinForce = 0;
     private int maxSpinForce = 100;
     private int minSpinForce = -100;
+    // random events
+    [Header("Random Events")]
+    [SerializeField] private float minTimeBeforeEvent = 0.5f;
+    [SerializeField] private float maxTimeBeforeEvent = 0.5f;
+    [SerializeField] private float eventDuration = 3f;
+    [SerializeField] private EventTypes[] ActiveEvents;
+    [SerializeField] private GameObject Popup;
+    private bool isRandomEventRunning = false;
+    private IEnumerator coroutineEvent;
 
     // event
     public UnityEvent OnStartGame;
     public UnityEvent OnEndGame;
     public UnityEvent OnSuddenDeathStart;
+    public UnityEvent<EventTypes> OnCallRandomEvent;
 
     // debug
+    [Header("Debug")]
     [SerializeField] private bool debugStartImmediately = true;
 
 
@@ -54,6 +70,7 @@ public class Gameloop : MonoBehaviour
 
     private void OnEnable()
     {
+        Popup.SetActive(false);
         playerControls.OnPlayerInput.AddListener(UpdateScore);
         playerControls.OnPlayerCounter.AddListener(UpdateScore);
 
@@ -63,6 +80,68 @@ public class Gameloop : MonoBehaviour
     {
         if (debugStartImmediately)
             StartGame();
+    }
+    public void StartGame()
+    {
+        // reset timer
+        gameRunning = true;
+        remainingGameTime = gameTimeInSeconds;
+        // start timer
+        OnStartGame.Invoke();
+        timerEnabled = true;
+        toupie.StartToupie();
+        score.SetupScoreBar();
+        SetupNextEvent();
+    }
+
+    private void SetupNextEvent()
+    {
+        if(gameRunning)
+        {
+            float randValue = Random.Range(minTimeBeforeEvent* gameTimeInSeconds, maxTimeBeforeEvent* gameTimeInSeconds);
+            EventTypes randEventSelected = ActiveEvents[Random.Range(0, ActiveEvents.Length - 1)];
+
+            Debug.Log("Next event in: " + randValue + " seconds, type is: " + randEventSelected.ToString());
+            coroutineEvent = EventCaller(randValue, randEventSelected);
+            StartCoroutine(coroutineEvent);
+        }
+        // Coroutine(TempsRandom, 
+    }
+
+    IEnumerator EventCaller(float timeToWait, EventTypes eventType)
+    {
+        yield return new WaitForSeconds(timeToWait);
+        OnCallRandomEvent.Invoke(eventType);
+        switch (eventType)
+        {
+            case EventTypes.InvertInputs:
+                playerControls.Inverted = true;
+                Popup.SetActive(true);
+                break;
+            case EventTypes.BlockInputsTODO:
+                break;
+            case EventTypes.MashKeyboardTODO:
+                break;
+            default:
+                break;
+        }
+        yield return new WaitForSeconds(eventDuration);
+        switch (eventType)
+        {
+            case EventTypes.InvertInputs:
+                playerControls.Inverted = false;
+                Popup.SetActive(false);
+                break;
+            case EventTypes.BlockInputsTODO:
+                break;
+            case EventTypes.MashKeyboardTODO:
+                break;
+            default:
+                break;
+        }
+        if (gameRunning)
+            SetupNextEvent();
+        yield return null;
     }
 
     // Update is called once per frame
@@ -89,21 +168,6 @@ public class Gameloop : MonoBehaviour
             SuddenDeathEnabled = true;
             OnSuddenDeathStart.Invoke();
         }
-    }
-
-
-    public void StartGame()
-        // reset timer
-    {
-        gameRunning = true;
-        remainingGameTime = gameTimeInSeconds;
-        // start timer
-        OnStartGame.Invoke();
-        timerEnabled = true;
-        toupie.StartToupie();
-        score.SetupScoreBar();
-        // enable player input
-    
     }
 
     private void UpdateScore(Player Attacker, int dmgValue)
@@ -146,4 +210,12 @@ public class Gameloop : MonoBehaviour
         // TODO Show End Screen UI
 
     }
+}
+
+public enum EventTypes
+{
+    DEFAULT,
+    InvertInputs,
+    BlockInputsTODO,
+    MashKeyboardTODO,
 }

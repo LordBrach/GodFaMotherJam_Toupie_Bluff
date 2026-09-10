@@ -1,3 +1,6 @@
+using JetBrains.Annotations;
+using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -5,11 +8,19 @@ using UnityEngine.Events;
 public class Toupie : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] GameObject toupieParent;
     [SerializeField] float baseSpeed = 2f;
     private float currentSpeed;
     [SerializeField] float maxSpeed = 10f;
     public UnityEvent ToupieStop;
     public UnityEvent ToupieStart;
+    [SerializeField]
+    private float amplitude = 10.0f;
+
+    [SerializeField]
+    private float frequency = 2.0f;
+    private bool fall = false;
+    private float angle = 0;
 
     public bool debugLogs = false;
     public void StartToupie()
@@ -28,6 +39,7 @@ public class Toupie : MonoBehaviour
         if(target <= 0)
         {
             ToupieStop.Invoke();
+            fall = true;
             // Play anim ou autre chose;
         }
         currentSpeed = target;
@@ -35,6 +47,21 @@ public class Toupie : MonoBehaviour
         if(debugLogs)
             Debug.Log("Toupie speed:" + currentSpeed);
     }
+
+    private void Update()
+    {
+        if(toupieParent && fall == false)
+        {
+            angle = Mathf.Sin(Time.time * frequency) * amplitude * 1 / currentSpeed;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            toupieParent.transform.rotation = Quaternion.identity * rotation;
+        }
+    }
+
+/*    IEnumerable Fall()
+    {
+
+    }*/
 
     private float CalcToupieVal(float min, float max, float inVal)
     {

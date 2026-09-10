@@ -95,7 +95,7 @@ public class PlayerControls : MonoBehaviour
         PlayerTwoWeak = true;
         Debug.Log("Player two is weak");
         yield return new WaitForSeconds(WeakTime);
-        PlayerOneWeak = false;
+        PlayerTwoWeak = false;
         Debug.Log("Player two isnt weak");
         yield return null;
 

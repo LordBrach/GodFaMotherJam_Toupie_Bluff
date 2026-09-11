@@ -43,6 +43,7 @@ public class ReadyPanel : MonoBehaviour
     [SerializeField] private AudioClip readyClip;
     [SerializeField] private AudioClip tickClip;
     [SerializeField] private AudioClip goClip;
+    [SerializeField] private AudioClip waitingMusic;
 
     [Header("Add here Gameloop.StartGame on inspector)")]
     [SerializeField] private UnityEvent onCountdownComplete;
@@ -78,6 +79,10 @@ public class ReadyPanel : MonoBehaviour
         inputs.Enable();
     }
 
+    private void Start()
+    {
+        AudioManager.Instance?.PlayMusic(waitingMusic);
+    }
     private void OnDestroy() => ReleaseInputs();
 
     private void Setup(PlayerSlot slot)
@@ -106,6 +111,7 @@ public class ReadyPanel : MonoBehaviour
     private IEnumerator ProceedRoutine()
     {
         ReleaseInputs(); // le ready-check est fini
+        AudioManager.Instance?.StopMusic();
 
         if (playersContainer != null) playersContainer.SetActive(false); 
 

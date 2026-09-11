@@ -22,6 +22,7 @@ public class Gameloop : MonoBehaviour
     private float remainingGameTime = 0.0f;
     private bool timerEnabled = false;
     private bool SuddenDeathEnabled;
+    [SerializeField]public int SuddenDeathMultiplier = 3;
     private bool gameRunning = false;
     // score
     [Header("Score")]
@@ -49,6 +50,7 @@ public class Gameloop : MonoBehaviour
     // debug
     [Header("Debug")]
     [SerializeField] private bool debugStartImmediately = true;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -110,6 +112,8 @@ public class Gameloop : MonoBehaviour
 
     IEnumerator EventCaller(float timeToWait, EventTypes eventType)
     {
+        if (SuddenDeathEnabled)
+            yield return null;
         yield return new WaitForSeconds(timeToWait);
         OnCallRandomEvent.Invoke(eventType);
         switch (eventType)
@@ -140,7 +144,7 @@ public class Gameloop : MonoBehaviour
             default:
                 break;
         }
-        if (gameRunning)
+        if (gameRunning && !SuddenDeathEnabled)
             SetupNextEvent();
         yield return null;
     }
@@ -165,6 +169,7 @@ public class Gameloop : MonoBehaviour
         {
             timerEnabled = false;
             Debug.Log("Mort subite");
+            playerControls.MortSubite = true;
             remainingGameTime = 0;
             SuddenDeathEnabled = true;
             OnSuddenDeathStart.Invoke();
@@ -176,7 +181,7 @@ public class Gameloop : MonoBehaviour
         //if (!timerEnabled) return;
         if (!gameRunning) return;
         if (SuddenDeathEnabled)
-            dmgValue = dmgValue * 2;
+            dmgValue *= SuddenDeathMultiplier;
 
         currentspinForce += dmgValue;
         score.UpdateScoreBar(currentspinForce);

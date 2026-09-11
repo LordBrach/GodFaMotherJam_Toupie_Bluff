@@ -19,6 +19,8 @@ public class PlayerControls : MonoBehaviour
     private IEnumerator coroutineTwo;
 
     public bool Inverted = false;
+    public bool MortSubite = false;
+
     //Events
     public UnityEvent<Player, int> OnPlayerInput;
     public UnityEvent<Player, int> OnPlayerCounter;
@@ -52,7 +54,7 @@ public class PlayerControls : MonoBehaviour
             i = -1;
         handPlayerOne.CallAttack();
         Debug.Log("Player one input");
-        if (PlayerTwoWeak)
+        if (PlayerTwoWeak && !MortSubite)
         {
             PlayerTwoWeak = false;
             Debug.Log("Counter");
@@ -76,7 +78,7 @@ public class PlayerControls : MonoBehaviour
             i = -1;
         handPlayerTwo.CallAttack();
         Debug.Log("Player two input");
-        if (PlayerOneWeak)
+        if (PlayerOneWeak && !MortSubite)
         {
             PlayerOneWeak = false;
             Debug.Log("Counter");

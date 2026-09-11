@@ -150,10 +150,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControls
   WeakTime: 0.25
   BaseDmg: 10
-  WeakDMGMultiplier: 2
+  WeakDMGMultiplier: 3
   handPlayerOne: {fileID: 1225394250}
   handPlayerTwo: {fileID: 378982792}
   Inverted: 0
+  MortSubite: 0
   OnPlayerInput:
     m_PersistentCalls:
       m_Calls: []
@@ -1543,6 +1544,7 @@ MonoBehaviour:
   toupie: {fileID: 147511961}
   gameTimeInSeconds: 20
   TMPTimer: {fileID: 1327557607}
+  SuddenDeathMultiplier: 3
   score: {fileID: 1327557606}
   minTimeBeforeEvent: 0.3
   maxTimeBeforeEvent: 0.6
@@ -1814,6 +1816,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 586569373242950938, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1604993610708391904, guid: d87870ce45fd4d9419d14d9d41cfb334, type: 3}
+    - target: {fileID: 1597918044734957815, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5061658501674490635, guid: c60a7c1e40d11e24b9055a97dd459b8e, type: 3}
     - target: {fileID: 2105270313858573891, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2034,6 +2044,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8913518369998338317, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5061658501674490635, guid: c60a7c1e40d11e24b9055a97dd459b8e, type: 3}
     - target: {fileID: 8952858589753089286, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
       propertyPath: m_Value
       value: 0

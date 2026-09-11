@@ -91,7 +91,6 @@ public class Gameloop : MonoBehaviour
         OnStartGame.Invoke();
         timerEnabled = true;
         toupie.StartToupie();
-        score.SetupScoreBar();
         SetupNextEvent();
     }
 

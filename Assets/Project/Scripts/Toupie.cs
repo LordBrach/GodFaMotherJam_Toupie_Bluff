@@ -35,12 +35,19 @@ public class Toupie : MonoBehaviour
     {
         target = CalcToupieVal(-100, 100, target);
         if (target >= maxSpeed)
-            target = maxSpeed;
-        if(target <= 0)
         {
+            target = maxSpeed;
+            animator.SetTrigger("VictoryFly");
+        }
+        if (target <= 0)
+        {
+            Debug.Log("Stop");
+            animator.SetFloat("SpeedValue", 1.0f);
             ToupieStop.Invoke();
             fall = true;
             // Play anim ou autre chose;
+            animator.SetTrigger("VictoryStop");
+            return;
         }
         currentSpeed = target;
         animator.SetFloat("SpeedValue", currentSpeed);

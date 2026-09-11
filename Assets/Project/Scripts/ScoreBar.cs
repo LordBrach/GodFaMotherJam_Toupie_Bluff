@@ -15,16 +15,22 @@ public class ScoreBar : MonoBehaviour
     public UnityEvent OnBeginUpdateScore;
     public UnityEvent OnEndUpdateScore;
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void SetupScoreBar()
     {
         target = 0f;
         slider = GetComponent<Slider>();
+        slider.value = 0f;
         if (pointeur != null)
         {
             pointeur.anchoredPosition = new Vector2 (0f, 0f);
         }
+    }
+
+    private void Start()
+    {
+        SetupScoreBar();
+        slider.value = 0.5f;
     }
 
     public void UpdateScoreBar(int currentScore)

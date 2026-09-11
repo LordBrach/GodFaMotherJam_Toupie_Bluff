@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/Menu.unity
     guid: bfa4dccac68f1c9468716f6b190aa076
   - enabled: 1
-    path: Assets/Project/Scenes/TestGameloop.unity
+    path: Assets/Project/Scenes/Game.unity
     guid: 69b0fe3b65a6a7e4aaf7766e3d2e2304
   - enabled: 1
     path: Assets/Project/Scenes/TempTestGLToPutReadyPanel.unity

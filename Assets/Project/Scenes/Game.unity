@@ -1836,6 +1836,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 5061658501674490635, guid: c60a7c1e40d11e24b9055a97dd459b8e, type: 3}
+    - target: {fileID: 1723159104509121597, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
+      propertyPath: m_text
+      value: Controls are reversed !
+      objectReference: {fileID: 0}
     - target: {fileID: 2105270313858573891, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

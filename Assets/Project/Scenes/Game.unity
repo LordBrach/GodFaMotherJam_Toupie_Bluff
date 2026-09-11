@@ -1542,12 +1542,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Gameloop
   playerControls: {fileID: 142485603}
   toupie: {fileID: 147511961}
-  gameTimeInSeconds: 20
+  gameTimeInSeconds: 60
   TMPTimer: {fileID: 1327557607}
   SuddenDeathMultiplier: 3
   score: {fileID: 1327557606}
-  minTimeBeforeEvent: 0.3
-  maxTimeBeforeEvent: 0.6
+  minTimeBeforeEvent: 0.34
+  maxTimeBeforeEvent: 0.35
   eventDuration: 10
   ActiveEvents: 01000000i
   Popup: {fileID: 715495345}
@@ -1561,6 +1561,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 900156748}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f647b9ed901b62e47a2fd7c00a2bdd73, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1613,8 +1625,20 @@ MonoBehaviour:
         m_MethodName: PlayMusic
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: f963fadc97c05fd40a14ae898a789c63, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 5d6ee5cd4a5b1d44581283e6c2c3f897, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1891495000}
+        m_TargetAssemblyTypeName: InfiniteScroller, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2288,6 +2312,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1945127521}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1891495000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1822391664892624613, guid: 84dd0a6d414573141a916f5c822d898f, type: 3}
+  m_PrefabInstance: {fileID: 1078020374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5325ce455bb142b4db8699198d65b717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfiniteScroller
 --- !u!1 &1945127520
 GameObject:
   m_ObjectHideFlags: 0

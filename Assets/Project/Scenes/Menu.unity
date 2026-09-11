@@ -1104,7 +1104,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 48353205073040317, guid: 8aae85752e67b0b409997138af456717, type: 3}
       propertyPath: gameSceneName
-      value: TempTestGLToPutReadyPanel
+      value: Game
       objectReference: {fileID: 0}
     - target: {fileID: 425816400548670660, guid: 8aae85752e67b0b409997138af456717, type: 3}
       propertyPath: m_AnchorMax.y

@@ -41,7 +41,7 @@ public class Gameloop : MonoBehaviour
 
     // event
     public UnityEvent OnStartGame;
-    public UnityEvent OnEndGame;
+    public UnityEvent<Player> OnEndGame;
     public UnityEvent OnSuddenDeathStart;
     public UnityEvent<EventTypes> OnCallRandomEvent;
 
@@ -65,7 +65,7 @@ public class Gameloop : MonoBehaviour
             instance = this;
             public_instance = this;
         }
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     private void OnEnable()
@@ -202,7 +202,7 @@ public class Gameloop : MonoBehaviour
             return;
         playerControls.Inverted = false;
         Popup.SetActive(false);
-        OnEndGame.Invoke();
+        OnEndGame.Invoke(Winner);
         gameRunning = false;
         Debug.Log("Winner is: " + Winner.ToString());
         // Block Player input (send event)

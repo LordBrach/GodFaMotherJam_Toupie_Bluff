@@ -44,6 +44,7 @@ public class Gameloop : MonoBehaviour
     public UnityEvent<Player> OnEndGame;
     public UnityEvent OnSuddenDeathStart;
     public UnityEvent<EventTypes> OnCallRandomEvent;
+    public UnityEvent<EventTypes> OnEndRandomEvent;
 
     // debug
     [Header("Debug")]
@@ -126,6 +127,7 @@ public class Gameloop : MonoBehaviour
                 break;
         }
         yield return new WaitForSeconds(eventDuration);
+        OnEndRandomEvent.Invoke(eventType);
         switch (eventType)
         {
             case EventTypes.InvertInputs:

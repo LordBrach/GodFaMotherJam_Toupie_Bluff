@@ -51,8 +51,7 @@ public class ScoreBar : MonoBehaviour
             n = Mathf.Lerp(a, b, f / x);
             current = n;
             pointeur.anchoredPosition = new Vector2(n, 0f);
-            sliderCurrent = Mathf.Lerp(sliderCurrent, b/5, f);
-            slider.value = sliderCurrent;
+            slider.value = n;
             yield return null;
         }
         OnEndUpdateScore.Invoke();

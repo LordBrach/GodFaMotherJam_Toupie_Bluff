@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InfiniteScroller : MonoBehaviour
+public class BGLoop : MonoBehaviour
 {
     public enum HorizontalDirection { Left, Right }
     public enum VerticalDirection { Up, Down }
@@ -19,6 +19,8 @@ public class InfiniteScroller : MonoBehaviour
     private float tileWidth, tileHeight;
     private float totalWidth, totalHeight; // largeur et hauteur de la grille complète (tuiles + marge)
     private float halfSpanX, halfSpanY; // distance du centre à partir de laquelle une tuile est hors écran
+    [SerializeField, Min(0f)] private float SlowDownValue = 0.2f;
+    public bool SlowDownEnabled = false;
 
     private void Awake() => BuildGrid();
 
@@ -63,10 +65,14 @@ public class InfiniteScroller : MonoBehaviour
 
     private void Update()
     {
-        // unscaledDeltaTime : le fond continue de défiler même en pause 
+        // unscaledDeltaTime : le fond continue de défiler même en pause
+        float y = 1.0f;
+        if (SlowDownEnabled)
+            y = SlowDownValue;
+
         float dt = Time.unscaledDeltaTime;
-        float dx = (horizontal == HorizontalDirection.Left ? -1f : 1f) * speed * dt;
-        float dy = (vertical == VerticalDirection.Down ? -1f : 1f) * speed * dt;
+        float dx = (horizontal == HorizontalDirection.Left ? -1f : 1f) * speed * dt * SlowDownValue;
+        float dy = (vertical == VerticalDirection.Down ? -1f : 1f) * speed * dt * SlowDownValue;
 
         for (int i = 0; i < tiles.Length; i++)
         {

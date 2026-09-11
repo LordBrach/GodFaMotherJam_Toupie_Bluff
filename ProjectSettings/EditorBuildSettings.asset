@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/Game.unity
     guid: 69b0fe3b65a6a7e4aaf7766e3d2e2304
-  - enabled: 1
+  - enabled: 0
     path: Assets/Project/Scenes/TempTestGLToPutReadyPanel.unity
     guid: adf01d143f37f2e4d8d1a4213fb79e7c
   m_configObjects:

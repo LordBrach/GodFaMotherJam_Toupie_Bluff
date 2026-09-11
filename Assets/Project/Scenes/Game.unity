@@ -1911,7 +1911,7 @@ PrefabInstance:
     - target: {fileID: 4393602184794895551, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
       propertyPath: readyClip
       value: 
-      objectReference: {fileID: 8300000, guid: 49d7b389bbf6ef1469699fe097a7bd19, type: 3}
+      objectReference: {fileID: 8300000, guid: 3c92509a188d6fd459d16f7b0392865a, type: 3}
     - target: {fileID: 4393602184794895551, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
       propertyPath: onCountdownComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -1157,6 +1157,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8300000, guid: f963fadc97c05fd40a14ae898a789c63, type: 3}
+        m_TargetAssemblyTypeName: Flames, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCallRandomEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1394,12 +1406,24 @@ PrefabInstance:
       value: MaskSlider
       objectReference: {fileID: 0}
     - target: {fileID: 3328838665852820414, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328838665852820414, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328838665852820414, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3328838665852820414, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328838665852820414, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 338.28967
       objectReference: {fileID: 0}
     - target: {fileID: 3328838665852820414, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1559,7 +1583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8283251047245423661, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8952858589753089286, guid: c0816aafedc462b49b0e1a7efb9b4e1e, type: 3}
       propertyPath: m_Value
